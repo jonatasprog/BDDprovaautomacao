@@ -71,96 +71,96 @@ namespace BDDprovaautomacao.Feature
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Selecionar um produto na página")]
-        public virtual void SelecionarUmProdutoNaPagina()
+        [NUnit.Framework.DescriptionAttribute("01 Selecionar um produto na página")]
+        public virtual void _01SelecionarUmProdutoNaPagina()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Selecionar um produto na página", null, ((string[])(null)));
-#line 6
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("01 Selecionar um produto na página", null, ((string[])(null)));
+#line 7
   this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 7
-    testRunner.Given("Usuário está na Home Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 8
-    testRunner.When("Usuário escolhe um produto", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+    testRunner.Given("Usuário está na Home Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 9
+    testRunner.When("Usuário escolhe um produto", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 10
     testRunner.Then("É redirecionado para a página de descrição do produto", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Adicionar um produto no carrinho")]
-        public virtual void AdicionarUmProdutoNoCarrinho()
+        [NUnit.Framework.DescriptionAttribute("02 Adicionar um produto no carrinho")]
+        public virtual void _02AdicionarUmProdutoNoCarrinho()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Adicionar um produto no carrinho", null, ((string[])(null)));
-#line 11
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("02 Adicionar um produto no carrinho", null, ((string[])(null)));
+#line 12
   this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 12
-    testRunner.Given("Usuário está na página de descrição de seu produto", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 13
-    testRunner.When("Usuário adiciona seu produto no carrinho", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+    testRunner.Given("Usuário está na página de descrição de seu produto", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 14
+    testRunner.When("Usuário adiciona seu produto no carrinho", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 15
     testRunner.Then("O usuário vai para a página de confirmação de seu item no carrinho", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Prosseguir na compra do produto")]
-        public virtual void ProsseguirNaCompraDoProduto()
+        [NUnit.Framework.DescriptionAttribute("03 Prosseguir na compra do produto")]
+        public virtual void _03ProsseguirNaCompraDoProduto()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Prosseguir na compra do produto", null, ((string[])(null)));
-#line 16
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("03 Prosseguir na compra do produto", null, ((string[])(null)));
+#line 17
   this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 17
-    testRunner.Given("Usuário está na pagina de confirmação", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 18
-    testRunner.And("Procede para o checkout", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.Given("Usuário está na pagina de confirmação", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 19
-    testRunner.When("O usuário confirma o produto", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+    testRunner.And("Procede para o checkout", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 20
+    testRunner.When("O usuário confirma o produto", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 21
     testRunner.Then("O usuário finaliza a primeira etapa da compra", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Criar uma conta")]
-        public virtual void CriarUmaConta()
+        [NUnit.Framework.DescriptionAttribute("04 Criar uma conta")]
+        public virtual void _04CriarUmaConta()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Criar uma conta", null, ((string[])(null)));
-#line 22
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("04 Criar uma conta", null, ((string[])(null)));
+#line 23
   this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 23
-    testRunner.Given("Usuario cadastra seu email", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 24
-    testRunner.And("Usuario confirma seu email", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.Given("Usuario cadastra seu email", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 25
+    testRunner.And("Usuario confirma seu email", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 26
     testRunner.Then("Usuário preenche e envia formulário de cadastro", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Finalizar a compra do produto")]
-        public virtual void FinalizarACompraDoProduto()
+        [NUnit.Framework.DescriptionAttribute("05 Finalizar a compra do produto")]
+        public virtual void _05FinalizarACompraDoProduto()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Finalizar a compra do produto", null, ((string[])(null)));
-#line 27
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("05 Finalizar a compra do produto", null, ((string[])(null)));
+#line 28
   this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 28
-    testRunner.Given("Usuário valida seus dados e prossegue", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 29
-    testRunner.And("Usuário aceita os termos de serviço e prossegue", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.Given("Usuário valida seus dados e prossegue", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 30
-    testRunner.And("Usuário valida o total do valor de seu produto", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.And("Usuário aceita os termos de serviço e prossegue", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 31
-    testRunner.When("Usuário seleciona um método de pagamento e prossegue", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+    testRunner.And("Usuário valida o total do valor de seu produto", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 32
+    testRunner.When("Usuário seleciona um método de pagamento e prossegue", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 33
     testRunner.Then("Usuário confere a finalização da sua compra", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
