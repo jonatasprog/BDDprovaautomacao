@@ -10,16 +10,17 @@ namespace BDDprovaautomacao.verificationpoints
         public ConfirmacaoDoProdutoVerificationPoint(IWebDriver navegador) : base(navegador)
         {
 
-        }
+        }        
 
-        public String getTitulo()
-        {
+            public String getTitulo()
+            {
+                String titulo;
+                titulo = navegador.FindElement(By.XPath("//span [text()='Faded Short Sleeve T-shirts']")).Text;
+                Assert.AreEqual(titulo, "Faded Short Sleeve T-shirts");
 
-            String titulo;
-            titulo = navegador.FindElement(By.LinkText("Faded Short Sleeve T-shirts")).Text;
-            Assert.AreEqual(titulo, "Faded Short Sleeve T-shirts");
+                return titulo;
 
-            return titulo;
+            }
         }
     }
-}
+

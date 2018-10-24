@@ -9,8 +9,7 @@ namespace BDDprovaautomacao
     [Binding]
     public class StepDefinitions
     {
-        private static IWebDriver navegador;
-                
+        private static IWebDriver navegador;                
 
         [Given(@"Usuário está na Home Page")]
         public void GivenUsuarioEstaNaHomePage()
@@ -18,91 +17,114 @@ namespace BDDprovaautomacao
             navegador = TestBase.createChrome();
         }
 
-        [When(@"Usuário escolhe um produto")]        
-        public void WhenUsuarioEscolheUmProduto()
-        {            
-            
-        }
-        
-        [Then(@"É redirecionado para a página de descrição do produto")]
-        public void ERedirecionadoParaAPaginaDeDescricaoDoProduto()
+        [Given(@"Usuário clica na imagem do produto")]
+        public void GivenUsuarioClicaNaImagemDoProduto()
         {
             EscolheProdutoTask elemento = new EscolheProdutoTask(navegador);
             elemento.clicarImagem();
         }
 
-        [Given(@"Usuário está na página de descrição de seu produto")]
-        public void GivenUsuarioEstaNaPaginaDeDescricaoDeSeuProduto()
+        [Given(@"O usuário é redirecionado para a página de descricao do produto")]
+        public void GivenOUsuarioERedirecionadoParaAPaginaDeDescricaoDoProduto()
         {
             PaginaDescricaoVerificationPoint tituloDescricaoDoProduto = new PaginaDescricaoVerificationPoint(navegador);
             tituloDescricaoDoProduto.getTitulo();
-
         }
 
-        [When(@"Usuário adiciona seu produto no carrinho")]        
-        public void WhenUsuarioAdicionaSeuProdutoNoCarrinho()
-        {
-           
-        }
-
-        [Then(@"O usuário vai para a página de confirmação de seu item no carrinho")]
-        public void ThenOUsuarioVaiParaAPaginaDeConfirmacaoDeSeuItemNoCarrinho()
+        [When(@"Usuário clica no botão de adicionar o produto no carrinho")]
+        public void WhenUsuarioClicaNoBotaoDeAdicionarOProdutoNoCarrinho()
         {
             AdicionaNoCarrinhoTask buttonAddToCart = new AdicionaNoCarrinhoTask(navegador);
             buttonAddToCart.clicarBotao();
         }
 
-        [Given(@"Usuário está na pagina de confirmação")]
-        public void GivenUsuarioEstaNaPaginaDeConfirmacao()
+        [When(@"Usuário é redirecionado para a janela de confirmação do produto")]
+        public void WhenUsuarioERedirecionadoParaAJanelaDeConfirmacaoDoProduto()
         {
             PaginaConfirmacaoVerificationPoint tituloProccedToCheckout = new PaginaConfirmacaoVerificationPoint(navegador);
             tituloProccedToCheckout.getTitulo();
         }
 
-        [Given(@"Procede para o checkout")]
-        public void GivenProcedeParaOCheckout()
+        [Then(@"O produto é apresentado na janela de confirmação do produto")]
+        public void ThenOProdutoEApresentadoNaJanelaDeConfirmacaoDoProduto()
         {
-            ProcedeParaCheckoutTask buttonProceedToCheckout = new ProcedeParaCheckoutTask(navegador);
-            buttonProceedToCheckout.clicarBotao();
+            PaginaConfirmacaoVerificationPoint tituloDoProduto = new PaginaConfirmacaoVerificationPoint(navegador);
+            tituloDoProduto.getTitulo2();
         }
 
-        [When(@"O usuário confirma o produto")]
-        public void WhenOUsuarioConfirmaOProduto()
+        [Given(@"Usuário está na janela de confirmação do produto")]
+        public void GivenUsuarioEstaNaJanelaDeConfirmacaoDoProduto()
+        {
+            PaginaConfirmacaoVerificationPoint tituloProccedToCheckout = new PaginaConfirmacaoVerificationPoint(navegador);
+            tituloProccedToCheckout.getTitulo();
+        }
+
+        [Given(@"Usuário confere o seu produto")]
+        public void GivenUsuarioConfereOSeuProduto()
         {
             ConfirmacaoDoProdutoVerificationPoint linkTextDoProduto = new ConfirmacaoDoProdutoVerificationPoint(navegador);
             linkTextDoProduto.getTitulo();
         }
 
-        [Then(@"O usuário finaliza a primeira etapa da compra")]
-        public void ThenOUsuarioFinalizaAPrimeiraEtapaDaCompra()
+        [When(@"Usuário clica no botão de proceder para o checkout")]
+        public void WhenUsuarioClicaNoBotaoDeProcederParaOCheckout()
+        {
+            ProcedeParaCheckoutTask buttonProceedToCheckout = new ProcedeParaCheckoutTask(navegador);
+            buttonProceedToCheckout.clicarBotao();
+        }
+
+        [When(@"O usuário é redirecionado para a página do carrinho")]
+        public void WhenOUsuarioERedirecionadoParaAPaginaDoCarrinho()
+        {         
+
+        }
+
+        [Then(@"Usuário clica no botão procede para checkout")]
+        public void ThenUsuarioClicaNoBotaoProcedeParaCheckout()
         {
             ProcedeParaCadastroTask buttonProceedToCheckout2 = new ProcedeParaCadastroTask(navegador);
             buttonProceedToCheckout2.clicarBotao();
         }
 
-        [Given(@"Usuario cadastra seu email")]
-        public void GivenUsuarioCadastraSeuEmail()
+
+
+
+        [Given(@"Usuário está na primeira página de Sign In")]
+        public void GivenUsuarioEstaNaPrimeiraPaginaDeSignIn()
+        {
+            
+        }
+
+        [Given(@"Usuário digita seu email no campo de email para cadastro")]
+        public void GivenUsuarioDigitaSeuEmailNoCampoDeEmailParaCadastro()
         {
             SignInPageTask campoCadastraEmail = new SignInPageTask(navegador);
             campoCadastraEmail.cadastrarEmail();
         }
 
-        [Given(@"Usuario confirma seu email")]
-        public void GivenUsuarioConfirmaSeuEmail()
+        [Given(@"Usuário clica no botão de criar conta")]
+        public void GivenUsuarioClicaNoBotaoDeCriarConta()
         {
             SignInPageTask submitCreateButton = new SignInPageTask(navegador);
             submitCreateButton.clicarBotao();
         }
 
-        [Then(@"Usuário preenche e envia formulário de cadastro")]
-        public void ThenUsuarioPreencheEEnviaFormularioDeCadastro()
+        [When(@"Usuario finalmente está na página de Sign In de cadastro dos seus demais dados")]
+        public void WhenUsuarioFinalmenteEstaNaPaginaDeSignInDeCadastroDosSeusDemaisDados()
+        {
+            
+        }
+
+        [Then(@"Usuário preenche o formulário e clica no botão para registrar")]
+        public void ThenUsuarioPreencheOFormularioEClicaNoBotaoParaRegistrar()
         {
             SignInPageTask elementosDeCadastro = new SignInPageTask(navegador);
             elementosDeCadastro.preencherFormulario();
-        }
+        }                  
 
         [Given(@"Usuário valida seus dados e prossegue")]
-        public void GivenUsuarioValidaSeusDadosEProssegue() { 
+        public void GivenUsuarioValidaSeusDadosEProssegue()
+        { 
            PaginaAdressVerificationPoint validarDados = new PaginaAdressVerificationPoint(navegador);
            validarDados.getAdress();
            PaginaAdressTask prosseguir = new PaginaAdressTask(navegador);

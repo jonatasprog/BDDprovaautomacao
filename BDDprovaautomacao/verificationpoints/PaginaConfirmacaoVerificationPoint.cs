@@ -21,5 +21,15 @@ namespace BDDprovaautomacao.verificationpoints
 
             return titulo;
         }
+
+        public String getTitulo2()
+        {
+            String titulo;
+            titulo = navegador.FindElement(By.XPath("//span [text()='Faded Short Sleeve T-shirts']")).Text;
+            Assert.AreEqual(titulo, "Faded Short Sleeve T-shirts");
+
+            return titulo;
+
+        }
     }
 }
