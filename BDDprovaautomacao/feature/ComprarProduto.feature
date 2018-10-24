@@ -22,12 +22,16 @@
 	Given Usuário está na primeira página de Sign In
     Given Usuário digita seu email no campo de email para cadastro
     And Usuário clica no botão de criar conta 
-	When Usuario finalmente está na página de Sign In de cadastro dos seus demais dados
-    Then Usuário preenche o formulário e clica no botão para registrar
+	When Usuário finalmente está na página de Sign In de cadastro dos seus demais dados
+    Then Usuário preenche o formulário e clica no botão para submeter seu registro
 
   Scenario: 04 Finalizar a compra do produto
-    Given Usuário valida seus dados e prossegue
-    And Usuário aceita os termos de serviço e prossegue
-    And Usuário valida o total do valor de seu produto
-    When Usuário seleciona um método de pagamento e prossegue
-    Then Usuário confere a finalização da sua compra	
+	Given Usuário está na sessão de confirmação do seus dados
+    And Usuário confere seus dados e clica no botão de proceder para checkout
+	And Usuário é redirecionado para a sessão de frete e forma de envio
+    And Usuário clica marcando a caixinha concordando com termos de serviço e envio 
+    And  Usuário clica no botão procede para checkout dessa sessão
+	And Usuário confere o total do seu produto
+    When Usuário seleciona um método de pagamento clicando no botao de crédito ou débito
+	And Usuário confere um resumo da sua compra
+    Then Usuário clica no botao de confirmação do pedido

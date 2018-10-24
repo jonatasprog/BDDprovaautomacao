@@ -131,9 +131,9 @@ namespace BDDprovaautomacao.Feature
 #line 24
     testRunner.And("Usuário clica no botão de criar conta", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 25
- testRunner.When("Usuario finalmente está na página de Sign In de cadastro dos seus demais dados", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("Usuário finalmente está na página de Sign In de cadastro dos seus demais dados", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 26
-    testRunner.Then("Usuário preenche o formulário e clica no botão para registrar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.Then("Usuário preenche o formulário e clica no botão para submeter seu registro", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -147,15 +147,23 @@ namespace BDDprovaautomacao.Feature
   this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 29
-    testRunner.Given("Usuário valida seus dados e prossegue", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("Usuário está na sessão de confirmação do seus dados", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 30
-    testRunner.And("Usuário aceita os termos de serviço e prossegue", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.And("Usuário confere seus dados e clica no botão de proceder para checkout", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 31
-    testRunner.And("Usuário valida o total do valor de seu produto", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("Usuário é redirecionado para a sessão de frete e forma de envio", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 32
-    testRunner.When("Usuário seleciona um método de pagamento e prossegue", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+    testRunner.And("Usuário clica marcando a caixinha concordando com termos de serviço e envio", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 33
-    testRunner.Then("Usuário confere a finalização da sua compra", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.And("Usuário clica no botão procede para checkout dessa sessão", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 34
+ testRunner.And("Usuário confere o total do seu produto", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 35
+    testRunner.When("Usuário seleciona um método de pagamento clicando no botao de crédito ou débito", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 36
+ testRunner.And("Usuário confere um resumo da sua compra", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 37
+    testRunner.Then("Usuário clica no botao de confirmação do pedido", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

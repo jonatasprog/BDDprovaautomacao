@@ -9,7 +9,7 @@ namespace BDDprovaautomacao
     [Binding]
     public class StepDefinitions
     {
-        private static IWebDriver navegador;                
+        private static IWebDriver navegador;
 
         [Given(@"Usuário está na Home Page")]
         public void GivenUsuarioEstaNaHomePage()
@@ -75,7 +75,7 @@ namespace BDDprovaautomacao
 
         [When(@"O usuário é redirecionado para a página do carrinho")]
         public void WhenOUsuarioERedirecionadoParaAPaginaDoCarrinho()
-        {         
+        {
 
         }
 
@@ -85,14 +85,11 @@ namespace BDDprovaautomacao
             ProcedeParaCadastroTask buttonProceedToCheckout2 = new ProcedeParaCadastroTask(navegador);
             buttonProceedToCheckout2.clicarBotao();
         }
-
-
-
-
+        
         [Given(@"Usuário está na primeira página de Sign In")]
         public void GivenUsuarioEstaNaPrimeiraPaginaDeSignIn()
         {
-            
+
         }
 
         [Given(@"Usuário digita seu email no campo de email para cadastro")]
@@ -109,58 +106,79 @@ namespace BDDprovaautomacao
             submitCreateButton.clicarBotao();
         }
 
-        [When(@"Usuario finalmente está na página de Sign In de cadastro dos seus demais dados")]
+        [When(@"Usuário finalmente está na página de Sign In de cadastro dos seus demais dados")]
         public void WhenUsuarioFinalmenteEstaNaPaginaDeSignInDeCadastroDosSeusDemaisDados()
         {
-            
+
         }
 
-        [Then(@"Usuário preenche o formulário e clica no botão para registrar")]
-        public void ThenUsuarioPreencheOFormularioEClicaNoBotaoParaRegistrar()
+        [Then(@"Usuário preenche o formulário e clica no botão para submeter seu registro")]
+        public void ThenUsuarioPreencheOFormularioEClicaNoBotaoParaSubmeterSeuRegistro()
         {
             SignInPageTask elementosDeCadastro = new SignInPageTask(navegador);
             elementosDeCadastro.preencherFormulario();
-        }                  
-
-        [Given(@"Usuário valida seus dados e prossegue")]
-        public void GivenUsuarioValidaSeusDadosEProssegue()
-        { 
-           PaginaAdressVerificationPoint validarDados = new PaginaAdressVerificationPoint(navegador);
-           validarDados.getAdress();
-           PaginaAdressTask prosseguir = new PaginaAdressTask(navegador);
-           prosseguir.clicarBotao();
+        }       
+        
+        [Given(@"Usuário está na sessão de confirmação do seus dados")]
+        public void GivenUsuarioEstaNaSessaoDeConfirmacaoDoSeusDados()
+        {
+            PaginaAdressVerificationPoint validarDados = new PaginaAdressVerificationPoint(navegador);
+            validarDados.getAdress();
         }
 
-        [Given(@"Usuário aceita os termos de serviço e prossegue")]
-        public void GivenUsuarioAceitaOsTermosDeServicoEProssegue()
+        [Given(@"Usuário confere seus dados e clica no botão de proceder para checkout")]
+        public void GivenUsuarioConfereSeusDadosEClicaNoBotaoDeProcederParaCheckout()
+        {
+            PaginaAdressTask prosseguir = new PaginaAdressTask(navegador);
+            prosseguir.clicarBotao();
+        }
+
+        [Given(@"Usuário é redirecionado para a sessão de frete e forma de envio")]
+        public void GivenUsuarioERedirecionadoParaASessaoDeFreteEFormaDeEnvio()
+        {
+
+        }
+
+        [Given(@"Usuário clica marcando a caixinha concordando com termos de serviço e envio")]
+        public void GivenUsuarioClicaMarcandoACaixinhaConcordandoComTermosDeServicoEEnvio()
         {
             ShippingPageTask aceitarTermos = new ShippingPageTask(navegador);
             aceitarTermos.marcarCheckBox();
+        }
+
+        [Given(@"Usuário clica no botão procede para checkout dessa sessão")]
+        public void GivenUsuarioClicaNoBotaoProcedeParaCheckoutDessaSessao()
+        {
             ShippingPageTask buttonProceedToCheckout = new ShippingPageTask(navegador);
             buttonProceedToCheckout.clicarBotao();
         }
 
-        [Given(@"Usuário valida o total do valor de seu produto")]
-        public void GivenUsuarioValidaOTotalDoValorDeSeuProduto()
+        [Given(@"Usuário confere o total do seu produto")]
+        public void GivenUsuarioConfereOTotalDoSeuProduto()
         {
             PaymentVerificationPoint total = new PaymentVerificationPoint(navegador);
             total.getTotal();
         }
 
-        [When(@"Usuário seleciona um método de pagamento e prossegue")]
-        public void WhenUsuarioSelecionaUmMetodoDePagamentoEProssegue()
+        [When(@"Usuário seleciona um método de pagamento clicando no botao de crédito ou débito")]
+        public void WhenUsuarioSelecionaUmMetodoDePagamentoClicandoNoBotaoDeCreditoOuDebito()
         {
             PaymentTask metodoDePagamento = new PaymentTask(navegador);
             metodoDePagamento.clicarBotao();
         }
 
-        [Then(@"Usuário confere a finalização da sua compra")]
-        public void ThenUsuarioCo()
+        [When(@"Usuário confere um resumo da sua compra")]
+        public void WhenUsuarioConfereUmResumoDaSuaCompra()
         {
             PaymentVerificationPoint totalAmount = new PaymentVerificationPoint(navegador);
             totalAmount.getTotalAmount();
+        }
+
+        [Then(@"Usuário clica no botao de confirmação do pedido")]
+        public void ThenUsuarioClicaNoBotaoDeConfirmacaoDoPedido()
+        {
             PaymentTask confirmarMinhaCompra = new PaymentTask(navegador);
             confirmarMinhaCompra.clicarBotaoConfirmandoPagamento();
-        }
-    }    
+        }        
+    }
 }
