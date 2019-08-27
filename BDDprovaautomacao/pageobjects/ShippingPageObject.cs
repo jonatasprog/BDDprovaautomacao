@@ -10,14 +10,14 @@ namespace BDDprovaautomacao.pageobjects
 
         }
 
-        public IWebElement getCheckBox(IWebDriver navegador)
+        public IWebElement GetCheckBox(IWebDriver navegador)
         {
 
             return navegador.FindElement(By.Id("uniform-cgv"));
 
         }
 
-        public IWebElement getProceedToCheckout(IWebDriver navegador)
+        public IWebElement GetProceedToCheckout(IWebDriver navegador)
         {
 
             return navegador.FindElement(By.Name("processCarrier"));

@@ -10,7 +10,7 @@ namespace BDDprovaautomacao.pageobjects
 
         }
 
-        public IWebElement getProceedToCheckout()
+        public IWebElement GetProceedToCheckout()
         {
 
             return this.navegador.FindElement(By.Name("processAddress"));

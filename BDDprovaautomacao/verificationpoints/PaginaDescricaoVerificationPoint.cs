@@ -10,7 +10,7 @@ namespace BDDprovaautomacao.verificationpoints
         public PaginaDescricaoVerificationPoint(IWebDriver navegador) : base(navegador) { }
         
 
-        public String getTitulo()
+        public String GetTitulo()
         {   
             String titulo;
             titulo = navegador.FindElement(By.XPath("//h3[contains(text(),'More info')]")).Text;
@@ -20,5 +20,4 @@ namespace BDDprovaautomacao.verificationpoints
 
         }
     }
-
 }

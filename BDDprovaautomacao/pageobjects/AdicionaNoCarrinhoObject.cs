@@ -11,7 +11,7 @@ namespace BDDprovaautomacao.pageobjects
 
         }
 
-        public IWebElement getAddToCartButton()
+        public IWebElement GetAddToCartButton()
         {            
             return this.navegador.FindElement(By.Name("Submit"));
         }

@@ -10,145 +10,145 @@ namespace BDDprovaautomacao.pageobjects
 
         }
 
-        public IWebElement setEmailAdress(IWebDriver navegador)
+        public IWebElement SetEmailAdress(IWebDriver navegador)
         {
             navegador.FindElement(By.Id("email_create")).Clear();
             return navegador.FindElement(By.Id("email_create"));
         }
 
-        public IWebElement getSubmitCreateButton(IWebDriver navegador)
+        public IWebElement GetSubmitCreateButton(IWebDriver navegador)
         {
 
             return navegador.FindElement(By.Id("SubmitCreate"));
         }
 
-        public IWebElement getRadioButton(IWebDriver navegador)
+        public IWebElement GetRadioButton(IWebDriver navegador)
         {
 
             return navegador.FindElement(By.Id("uniform-id_gender1"));
         }
 
-        public IWebElement setFirstCustomerName(IWebDriver navegador)
+        public IWebElement SetFirstCustomerName(IWebDriver navegador)
         {
 
             return navegador.FindElement(By.Id("customer_firstname"));
         }
 
-        public IWebElement setLastCustomerName(IWebDriver navegador)
+        public IWebElement SetLastCustomerName(IWebDriver navegador)
         {
 
             return navegador.FindElement(By.Id("customer_lastname"));
         }
 
-        public IWebElement setEmail(IWebDriver navegador)
+        public IWebElement SetEmail(IWebDriver navegador)
         {
             navegador.FindElement(By.Id("email")).Clear();
             return navegador.FindElement(By.Id("email"));
         }
 
-        public IWebElement setPasswd(IWebDriver navegador)
+        public IWebElement SetPasswd(IWebDriver navegador)
         {
 
             return navegador.FindElement(By.Id("passwd"));
         }
 
-        public IWebElement comboDay(IWebDriver navegador)
+        public IWebElement ComboDay(IWebDriver navegador)
         {
 
             return navegador.FindElement(By.Id("days"));
         }
 
-        public IWebElement comboMonth(IWebDriver navegador)
+        public IWebElement ComboMonth(IWebDriver navegador)
         {
 
             return navegador.FindElement(By.Id("months"));
         }
 
-        public IWebElement comboYear(IWebDriver navegador)
+        public IWebElement ComboYear(IWebDriver navegador)
         {
 
             return navegador.FindElement(By.Id("years"));
         }
 
-        public IWebElement setFirstName(IWebDriver navegador)
+        public IWebElement SetFirstName(IWebDriver navegador)
         {
 
             return navegador.FindElement(By.Id("firstname"));
         }
 
-        public IWebElement setLastName(IWebDriver navegador)
+        public IWebElement SetLastName(IWebDriver navegador)
         {
 
             return navegador.FindElement(By.Id("lastname"));
         }
 
-        public IWebElement setCompany(IWebDriver navegador)
+        public IWebElement SetCompany(IWebDriver navegador)
         {
 
             return navegador.FindElement(By.Id("company"));
         }
 
-        public IWebElement setAdress(IWebDriver navegador)
+        public IWebElement SetAdress(IWebDriver navegador)
         {
 
             return navegador.FindElement(By.Id("address1"));
         }
 
-        public IWebElement setAdress2(IWebDriver navegador)
+        public IWebElement SetAdress2(IWebDriver navegador)
         {
 
             return navegador.FindElement(By.Id("address2"));
         }
 
-        public IWebElement setCity(IWebDriver navegador)
+        public IWebElement SetCity(IWebDriver navegador)
         {
 
             return navegador.FindElement(By.Id("city"));
         }
 
-        public IWebElement comboState(IWebDriver navegador)
+        public IWebElement ComboState(IWebDriver navegador)
         {
 
             return navegador.FindElement(By.Name("id_state"));
         }
 
-        public IWebElement setPostalCode(IWebDriver navegador)
+        public IWebElement SetPostalCode(IWebDriver navegador)
         {
 
             return navegador.FindElement(By.Id("postcode"));
         }
 
-        public IWebElement setComboCountry(IWebDriver navegador)
+        public IWebElement SetComboCountry(IWebDriver navegador)
         {
 
             return navegador.FindElement(By.Id("id_country"));
         }
 
-        public IWebElement setAdditionalInformation(IWebDriver navegador)
+        public IWebElement SetAdditionalInformation(IWebDriver navegador)
         {
 
             return navegador.FindElement(By.Id("other"));
         }
 
-        public IWebElement setHomePhone(IWebDriver navegador)
+        public IWebElement SetHomePhone(IWebDriver navegador)
         {
 
             return navegador.FindElement(By.Id("phone"));
         }
 
-        public IWebElement setMobilePhone(IWebDriver navegador)
+        public IWebElement SetMobilePhone(IWebDriver navegador)
         {
 
             return navegador.FindElement(By.Id("phone_mobile"));
         }
 
-        public IWebElement setAdressAlias(IWebDriver navegador)
+        public IWebElement SetAdressAlias(IWebDriver navegador)
         {
             navegador.FindElement(By.Id("alias")).Clear();
             return navegador.FindElement(By.Id("alias"));
         }
 
-        public IWebElement getRegisterButton(IWebDriver navegador)
+        public IWebElement GetRegisterButton(IWebDriver navegador)
         {
 
             return navegador.FindElement(By.Id("submitAccount"));

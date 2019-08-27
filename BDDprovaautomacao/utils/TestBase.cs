@@ -8,7 +8,7 @@ namespace BDDprovaautomacao.utils
 {
     public class TestBase
     {
-        public static IWebDriver createChrome()
+        public static IWebDriver CreateChrome()
         {            
             new DriverManager().SetUpDriver(new ChromeConfig());
             IWebDriver navegador = new ChromeDriver();            

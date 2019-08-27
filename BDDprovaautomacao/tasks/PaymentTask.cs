@@ -14,14 +14,14 @@ namespace BDDprovaautomacao.tasks
             this.buttonPayByBankWire = new PaymentPageObject(this.navegador);
         }
 
-        public void clicarBotao()
+        public void ClicarBotao()
         {
-            this.buttonPayByBankWire.getPayByBankWire(navegador).Click();
+            this.buttonPayByBankWire.GetPayByBankWire(navegador).Click();
         }
 
-        public void clicarBotaoConfirmandoPagamento()
+        public void ClicarBotaoConfirmandoPagamento()
         {
-            this.buttonPayByBankWire.getIConfirmMyOrder(navegador).Click();
+            this.buttonPayByBankWire.GetIConfirmMyOrder(navegador).Click();
         }
     }
 }

@@ -10,7 +10,7 @@ namespace BDDprovaautomacao.pageobjects
 
         }
 
-        public IWebElement getProceedToCheckout()
+        public IWebElement GetProceedToCheckout()
         {
 
             return navegador.FindElement(By.LinkText("Proceed to checkout"));

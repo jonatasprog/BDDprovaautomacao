@@ -73,16 +73,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="pageobjects\AdicionaNoCarrinhoObject.cs" />
-    <Compile Include="pageobjects\EscolheProdutoObject.cs" />
-    <Compile Include="pageobjects\PaginaAdressObject.cs" />
-    <Compile Include="pageobjects\PaymentPageObject.cs" />
-    <Compile Include="pageobjects\ProcedeParaCadastroObject.cs" />
-    <Compile Include="pageobjects\ProcedeParaCheckoutObject.cs" />
-    <Compile Include="pageobjects\ShippingPageObject.cs" />
-    <Compile Include="pageobjects\SignInPageObject.cs" />
+    <Compile Include="pageObjects\AdicionaNoCarrinhoObject.cs" />
+    <Compile Include="pageObjects\EscolheProdutoObject.cs" />
+    <Compile Include="pageObjects\PaginaAdressObject.cs" />
+    <Compile Include="pageObjects\PaymentPageObject.cs" />
+    <Compile Include="pageObjects\ProcedeParaCadastroObject.cs" />
+    <Compile Include="pageObjects\ProcedeParaCheckoutObject.cs" />
+    <Compile Include="pageObjects\ShippingPageObject.cs" />
+    <Compile Include="pageObjects\SignInPageObject.cs" />
     <Compile Include="steps\ComprarProduto.cs" />
-    <Compile Include="feature\ComprarProduto.feature.cs">
+    <Compile Include="features\ComprarProduto.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ComprarProduto.feature</DependentUpon>
@@ -98,23 +98,21 @@
     <Compile Include="tasks\SignInPageTask.cs" />
     <Compile Include="utils\BasePageObject.cs" />
     <Compile Include="utils\TestBase.cs" />
-    <Compile Include="verificationpoints\ConfirmacaoDoProdutoVerificationPoint.cs" />
-    <Compile Include="verificationpoints\PaginaAdressVerificationPoint.cs" />
-    <Compile Include="verificationpoints\PaginaConfirmacaoVerificationPoint.cs" />
-    <Compile Include="verificationpoints\PaginaDescricaoVerificationPoint.cs" />
-    <Compile Include="verificationpoints\PaymentVerificationPoint.cs" />
+    <Compile Include="verificationPoints\ConfirmacaoDoProdutoVerificationPoint.cs" />
+    <Compile Include="verificationPoints\PaginaAdressVerificationPoint.cs" />
+    <Compile Include="verificationPoints\PaginaConfirmacaoVerificationPoint.cs" />
+    <Compile Include="verificationPoints\PaginaDescricaoVerificationPoint.cs" />
+    <Compile Include="verificationPoints\PaymentVerificationPoint.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="feature\ComprarProduto.feature">
+    <None Include="features\ComprarProduto.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>ComprarProduto.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="runner\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

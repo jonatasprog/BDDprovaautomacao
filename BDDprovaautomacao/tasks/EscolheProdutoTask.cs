@@ -14,9 +14,9 @@ namespace BDDprovaautomacao.tasks
             this.produtoPageObject = new EscolheProdutoObject(this.navegador);
         }
 
-        public void clicarImagem()
+        public void ClicarImagem()
         {
-            this.produtoPageObject.getImagemDoProduto().Click();            
+            this.produtoPageObject.GetImagemDoProduto().Click();            
         }
     }
 }

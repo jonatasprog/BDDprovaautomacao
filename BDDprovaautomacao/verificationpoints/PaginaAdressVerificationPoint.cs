@@ -12,7 +12,7 @@ namespace BDDprovaautomacao.verificationpoints
 
         }
 
-        public String getAdress()
+        public String GetAdress()
         {
 
             String titulo;

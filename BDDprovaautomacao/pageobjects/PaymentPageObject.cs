@@ -10,14 +10,14 @@ namespace BDDprovaautomacao.pageobjects
 
         }
 
-        public IWebElement getPayByBankWire(IWebDriver navegador)
+        public IWebElement GetPayByBankWire(IWebDriver navegador)
         {
 
             return navegador.FindElement(By.ClassName("bankwire"));
 
         }
 
-        public IWebElement getIConfirmMyOrder(IWebDriver navegador)
+        public IWebElement GetIConfirmMyOrder(IWebDriver navegador)
         {
 
             return this.navegador.FindElement(By.CssSelector(".cart_navigation .button-medium"));

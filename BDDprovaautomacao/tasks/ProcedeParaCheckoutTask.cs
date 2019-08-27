@@ -14,9 +14,9 @@ namespace BDDprovaautomacao.tasks
             this.buttonAddToCart = new ProcedeParaCheckoutObject(this.navegador);
         }
 
-        public void clicarBotao()
+        public void ClicarBotao()
         {
-            this.buttonAddToCart.getProceedToCheckout().Click();
+            this.buttonAddToCart.GetProceedToCheckout().Click();
         }
     }
 }

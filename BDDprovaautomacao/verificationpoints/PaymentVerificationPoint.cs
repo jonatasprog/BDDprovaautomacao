@@ -9,7 +9,7 @@ namespace BDDprovaautomacao.verificationpoints
     {
         public PaymentVerificationPoint(IWebDriver navegador) : base(navegador) { }
 
-        public String getTotal()
+        public String GetTotal()
         {
 
             String total;
@@ -19,7 +19,7 @@ namespace BDDprovaautomacao.verificationpoints
             return total;
         }
 
-        public String getTotalAmount()
+        public String GetTotalAmount()
         {
 
             String total;

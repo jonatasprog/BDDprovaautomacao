@@ -16,17 +16,14 @@ namespace BDDprovaautomacao.tasks
             this.marcarCheckBoxx = new ShippingPageObject(this.navegador);
         }
 
-        public void marcarCheckBox()
+        public void MarcarCheckBox()
         {
-
-            this.marcarCheckBoxx.getCheckBox(navegador).Click();
-
-
+            this.marcarCheckBoxx.GetCheckBox(navegador).Click();
         }
 
-        public void clicarBotao()
+        public void ClicarBotao()
         {
-            this.buttonProceedToCheckout.getProceedToCheckout(navegador).Click();
+            this.buttonProceedToCheckout.GetProceedToCheckout(navegador).Click();
         }
     }
 }

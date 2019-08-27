@@ -13,7 +13,7 @@ namespace BDDprovaautomacao.pageobjects
             
         }        
 
-        public IWebElement getImagemDoProduto()
+        public IWebElement GetImagemDoProduto()
         {
             navegador.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10.00);
             return this.navegador.FindElement(By.PartialLinkText("Faded Short Sleeve T-shirts"));

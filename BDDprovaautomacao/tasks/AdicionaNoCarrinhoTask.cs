@@ -14,10 +14,9 @@ namespace BDDprovaautomacao.tasks
             this.buttonAddToCart = new AdicionaNoCarrinhoObject(this.navegador);
         }
         
-        public void clicarBotao()
+        public void ClicarBotao()
         {
-            this.buttonAddToCart.getAddToCartButton().Click();
+            this.buttonAddToCart.GetAddToCartButton().Click();
         }
     }
 }
-

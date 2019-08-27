@@ -12,7 +12,7 @@ namespace BDDprovaautomacao.verificationpoints
 
         }        
 
-            public String getTitulo()
+            public String GetTitulo()
             {
                 String titulo;
                 titulo = navegador.FindElement(By.XPath("//span [text()='Faded Short Sleeve T-shirts']")).Text;
@@ -23,4 +23,3 @@ namespace BDDprovaautomacao.verificationpoints
             }
         }
     }
-
