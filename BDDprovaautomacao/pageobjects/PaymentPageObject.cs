@@ -20,7 +20,7 @@ namespace BDDprovaautomacao.pageobjects
         public IWebElement GetIConfirmMyOrder(IWebDriver navegador)
         {
 
-            return this.navegador.FindElement(By.CssSelector(".cart_navigation .button-medium"));
+            return navegador.FindElement(By.CssSelector(".cart_navigation .button-medium"));
 
         }
     }

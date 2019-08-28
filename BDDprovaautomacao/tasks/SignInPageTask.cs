@@ -1,4 +1,6 @@
 ﻿using BDDprovaautomacao.pageobjects;
+using BDDprovaautomacao.utils;
+using FrameworkCsharp.Utils;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using System;
@@ -67,10 +69,41 @@ namespace BDDprovaautomacao.tasks
             this.buttonCreateAccount.GetSubmitCreateButton(navegador).Click();
         }
 
+        //public void PreencherFormulario()
+        //{
+        //    this.radioButton.GetRadioButton(navegador).Click();
+        //    this.campoCustomerFirstName.SetFirstCustomerName(navegador).SendKeys("Jônatas");
+        //    this.campoCustomerLastName.SetLastCustomerName(navegador).SendKeys("Deorce");
+        //    this.campoPassword.SetPasswd(navegador).SendKeys("DbServer123456");
+        //    this.comboDay.ComboDay(navegador).Click();
+        //    new SelectElement(comboDay.ComboDay(navegador)).SelectByValue("3");
+        //    this.comboMonth.ComboMonth(navegador).Click();
+        //    new SelectElement(comboMonth.ComboMonth(navegador)).SelectByText("March ");
+        //    this.comboYear.ComboYear(navegador).Click();
+        //    new SelectElement(comboYear.ComboYear(navegador)).SelectByText("1989  ");
+        //    this.campoCompany.SetCompany(navegador).SendKeys("DbServer");
+        //    this.campoAdress.SetAdress(navegador).SendKeys("Avenida Ipiranga, número 17");
+        //    this.campoAdress2.SetAdress2(navegador).SendKeys("Próximo a PUCRS");
+        //    this.campoCity.SetCity(navegador).SendKeys("Porto Alegre");
+        //    this.comboState.ComboState(navegador).Click();
+        //    new SelectElement(comboState.ComboState(navegador)).SelectByText("Alabama");
+        //    this.campoPostalCode.SetPostalCode(navegador).SendKeys("29150");
+        //    this.comboCountry.SetComboCountry(navegador).Click();
+        //    new SelectElement(comboCountry.SetComboCountry(navegador)).SelectByText("United States");
+        //    this.campoAdditionalInformation.SetAdditionalInformation(navegador).SendKeys("Moro no Brasil, porém este form só aceita Estados Unidos no ComboBox!");
+        //    this.campoHomePhone.SetHomePhone(navegador).SendKeys("2730907708");
+        //    this.campoMobilePhone.SetMobilePhone(navegador).SendKeys("27995322525");
+        //    this.campoAdressAlias.SetAdressAlias(navegador).SendKeys("jonatasd@dbserver.com.br");
+        //    this.registerButton.GetRegisterButton(navegador).Click();
+
+        //}
+
         public void PreencherFormulario()
         {
+            CsvDatapool datapool = new CsvDatapool(ProjConfig.GetPath("\\BDDprovaautomacao\\datapools\\csvs\\FormularioCadastro.csv"));            
+            
             this.radioButton.GetRadioButton(navegador).Click();
-            this.campoCustomerFirstName.SetFirstCustomerName(navegador).SendKeys("Jônatas");
+            this.campoCustomerFirstName.SetFirstCustomerName(navegador).SendKeys(datapool.GetValue("FirstName"));
             this.campoCustomerLastName.SetLastCustomerName(navegador).SendKeys("Deorce");
             this.campoPassword.SetPasswd(navegador).SendKeys("DbServer123456");
             this.comboDay.ComboDay(navegador).Click();

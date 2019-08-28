@@ -11,7 +11,6 @@ namespace BDDprovaautomacao.verificationpoints
         {
 
         }
-
         public String GetAdress()
         {
 

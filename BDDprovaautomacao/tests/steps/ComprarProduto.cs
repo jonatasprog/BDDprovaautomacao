@@ -1,6 +1,7 @@
 ﻿using BDDprovaautomacao.tasks;
 using BDDprovaautomacao.utils;
 using BDDprovaautomacao.verificationpoints;
+using FrameworkCsharp.Utils;
 using OpenQA.Selenium;
 using TechTalk.SpecFlow;
 
@@ -9,7 +10,7 @@ namespace BDDprovaautomacao
     [Binding]
     public class StepDefinitions
     {
-        private static IWebDriver navegador;
+        private static IWebDriver navegador;        
 
         [Given(@"Usuário está na Home Page")]
         public void GivenUsuarioEstaNaHomePage()
