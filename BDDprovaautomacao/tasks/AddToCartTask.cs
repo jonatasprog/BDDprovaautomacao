@@ -3,15 +3,15 @@ using OpenQA.Selenium;
 
 namespace BDDprovaautomacao.tasks
 {
-    class AdicionaNoCarrinhoTask
+    class AddToCartTask
     {
         private IWebDriver navegador;
-        public AdicionaNoCarrinhoObject buttonAddToCart;
+        public AddToCartObject buttonAddToCart;
 
-        public AdicionaNoCarrinhoTask(IWebDriver navegador)
+        public AddToCartTask(IWebDriver navegador)
         {
             this.navegador = navegador;
-            this.buttonAddToCart = new AdicionaNoCarrinhoObject(this.navegador);
+            this.buttonAddToCart = new AddToCartObject(this.navegador);
         }
         
         public void ClicarBotao()

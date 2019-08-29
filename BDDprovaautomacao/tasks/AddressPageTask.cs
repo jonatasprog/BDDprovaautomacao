@@ -3,15 +3,15 @@ using OpenQA.Selenium;
 
 namespace BDDprovaautomacao.tasks
 {
-    class PaginaAdressTask
+    class AddressPageTask
     {
         private IWebDriver navegador;
-        public PaginaAdressObject buttonProceedToCheckout;
+        public AddressPageObject buttonProceedToCheckout;
 
-        public PaginaAdressTask(IWebDriver navegador)
+        public AddressPageTask(IWebDriver navegador)
         {
             this.navegador = navegador;
-            this.buttonProceedToCheckout = new PaginaAdressObject(this.navegador);
+            this.buttonProceedToCheckout = new AddressPageObject(this.navegador);
         }
 
         public void ClicarBotao()

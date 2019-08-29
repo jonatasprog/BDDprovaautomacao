@@ -13,7 +13,7 @@
 
   Scenario: 02 Prosseguir para checkout
     Given Usuário está na janela de confirmação do produto
-	And Usuário confere o seu produto
+	And Usuário confere o seu produto	
     When Usuário clica no botão de proceder para o checkout
     And O usuário é redirecionado para a página do carrinho
     Then Usuário clica no botão procede para checkout 
@@ -30,8 +30,8 @@
     And Usuário confere seus dados e clica no botão de proceder para checkout
 	And Usuário é redirecionado para a sessão de frete e forma de envio
     And Usuário clica marcando a caixinha concordando com termos de serviço e envio 
-    And  Usuário clica no botão procede para checkout dessa sessão
+    And Usuário clica no botão procede para checkout dessa sessão
 	And Usuário confere o total do seu produto
     When Usuário seleciona um método de pagamento clicando no botao de crédito ou débito
 	And Usuário confere um resumo da sua compra
-    Then Usuário clica no botao de confirmação do pedido
+    Then Usuário clica no botao de confirmação do pedido 	

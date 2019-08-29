@@ -5,9 +5,9 @@ using System;
 
 namespace BDDprovaautomacao.verificationpoints
 {
-    class ConfirmacaoDoProdutoVerificationPoint : BasePageObject
+    class ProductConfirmationVerificationPoint : BasePageObject
     {
-        public ConfirmacaoDoProdutoVerificationPoint(IWebDriver navegador) : base(navegador)
+        public ProductConfirmationVerificationPoint(IWebDriver navegador) : base(navegador)
         {
 
         }

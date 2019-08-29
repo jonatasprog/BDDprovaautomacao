@@ -2,7 +2,7 @@
 using System;
 using System.IO;
 
-namespace FrameworkCsharp.Utils
+namespace BDDprovaautomacao.utils
 {
     public static class Report
     {

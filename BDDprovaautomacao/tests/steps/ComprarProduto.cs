@@ -1,8 +1,9 @@
 ﻿using BDDprovaautomacao.tasks;
 using BDDprovaautomacao.utils;
 using BDDprovaautomacao.verificationpoints;
-using FrameworkCsharp.Utils;
+using BDDprovaautomacao.verificationPoints;
 using OpenQA.Selenium;
+using System;
 using TechTalk.SpecFlow;
 
 namespace BDDprovaautomacao
@@ -15,55 +16,58 @@ namespace BDDprovaautomacao
         [Given(@"Usuário está na Home Page")]
         public void GivenUsuarioEstaNaHomePage()
         {
+            Report.Start("BDDprovaautomacao", true);
+            Report.AddTestCase("BDDprovaautomacao", DateTime.Now.ToString("dd_MM_yyyy_HH_mm_ss_FFF"));
             navegador = TestBase.CreateChrome();
+            HomePageVerificationPoint homePage = new HomePageVerificationPoint(navegador);
+            homePage.GetHomePageVP();
         }
 
         [Given(@"Usuário clica na imagem do produto")]
         public void GivenUsuarioClicaNaImagemDoProduto()
         {
-            EscolheProdutoTask elemento = new EscolheProdutoTask(navegador);
+            HomePageTask elemento = new HomePageTask(navegador);
             elemento.ClicarImagem();
         }
 
         [Given(@"O usuário é redirecionado para a página de descricao do produto")]
         public void GivenOUsuarioERedirecionadoParaAPaginaDeDescricaoDoProduto()
         {
-            PaginaDescricaoVerificationPoint tituloDescricaoDoProduto = new PaginaDescricaoVerificationPoint(navegador);
-            tituloDescricaoDoProduto.GetTitulo();
+            DescriptionPageVerificationPoint tituloDescricaoDoProduto = new DescriptionPageVerificationPoint(navegador);
+            tituloDescricaoDoProduto.GetTituloVP();
         }
 
         [When(@"Usuário clica no botão de adicionar o produto no carrinho")]
         public void WhenUsuarioClicaNoBotaoDeAdicionarOProdutoNoCarrinho()
         {
-            AdicionaNoCarrinhoTask buttonAddToCart = new AdicionaNoCarrinhoTask(navegador);
+            AddToCartTask buttonAddToCart = new AddToCartTask(navegador);
             buttonAddToCart.ClicarBotao();
         }
 
         [When(@"Usuário é redirecionado para a janela de confirmação do produto")]
         public void WhenUsuarioERedirecionadoParaAJanelaDeConfirmacaoDoProduto()
         {
-            PaginaConfirmacaoVerificationPoint tituloProccedToCheckout = new PaginaConfirmacaoVerificationPoint(navegador);
-            tituloProccedToCheckout.GetTitulo();
+            ConfirmationPageVerificationPoint tituloProccedToCheckout = new ConfirmationPageVerificationPoint(navegador);
+            tituloProccedToCheckout.GetTituloVP();
         }
 
         [Then(@"O produto é apresentado na janela de confirmação do produto")]
         public void ThenOProdutoEApresentadoNaJanelaDeConfirmacaoDoProduto()
         {
-            PaginaConfirmacaoVerificationPoint tituloDoProduto = new PaginaConfirmacaoVerificationPoint(navegador);
-            tituloDoProduto.GetTitulo2();
+            ConfirmationPageVerificationPoint tituloDoProduto = new ConfirmationPageVerificationPoint(navegador);
+            tituloDoProduto.GetTituloVP2();
         }
 
         [Given(@"Usuário está na janela de confirmação do produto")]
         public void GivenUsuarioEstaNaJanelaDeConfirmacaoDoProduto()
         {
-            PaginaConfirmacaoVerificationPoint tituloProccedToCheckout = new PaginaConfirmacaoVerificationPoint(navegador);
-            tituloProccedToCheckout.GetTitulo();
+            //WhenUsuarioERedirecionadoParaAJanelaDeConfirmacaoDoProduto();
         }
 
         [Given(@"Usuário confere o seu produto")]
         public void GivenUsuarioConfereOSeuProduto()
         {
-            ConfirmacaoDoProdutoVerificationPoint linkTextDoProduto = new ConfirmacaoDoProdutoVerificationPoint(navegador);
+            ProductConfirmationVerificationPoint linkTextDoProduto = new ProductConfirmationVerificationPoint(navegador);
             linkTextDoProduto.GetTitulo();
         }
 
@@ -83,7 +87,7 @@ namespace BDDprovaautomacao
         [Then(@"Usuário clica no botão procede para checkout")]
         public void ThenUsuarioClicaNoBotaoProcedeParaCheckout()
         {
-            ProcedeParaCadastroTask buttonProceedToCheckout2 = new ProcedeParaCadastroTask(navegador);
+            ProceedToRegisterTask buttonProceedToCheckout2 = new ProceedToRegisterTask(navegador);
             buttonProceedToCheckout2.ClicarBotao();
         }
         
@@ -123,14 +127,14 @@ namespace BDDprovaautomacao
         [Given(@"Usuário está na sessão de confirmação do seus dados")]
         public void GivenUsuarioEstaNaSessaoDeConfirmacaoDoSeusDados()
         {
-            PaginaAdressVerificationPoint validarDados = new PaginaAdressVerificationPoint(navegador);
+            AddressPageVerificationPoint validarDados = new AddressPageVerificationPoint(navegador);
             validarDados.GetAdress();
         }
 
         [Given(@"Usuário confere seus dados e clica no botão de proceder para checkout")]
         public void GivenUsuarioConfereSeusDadosEClicaNoBotaoDeProcederParaCheckout()
         {
-            PaginaAdressTask prosseguir = new PaginaAdressTask(navegador);
+            AddressPageTask prosseguir = new AddressPageTask(navegador);
             prosseguir.ClicarBotao();
         }
 
@@ -174,12 +178,14 @@ namespace BDDprovaautomacao
             PaymentVerificationPoint totalAmount = new PaymentVerificationPoint(navegador);
             totalAmount.GetTotalAmount();
         }
-
+        
         [Then(@"Usuário clica no botao de confirmação do pedido")]
         public void ThenUsuarioClicaNoBotaoDeConfirmacaoDoPedido()
         {
             PaymentTask confirmarMinhaCompra = new PaymentTask(navegador);
             confirmarMinhaCompra.ClicarBotaoConfirmandoPagamento();
-        }        
+            TestBase.FecharBrownser(navegador);
+        }      
+
     }
 }

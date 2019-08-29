@@ -3,15 +3,15 @@ using OpenQA.Selenium;
 
 namespace BDDprovaautomacao.tasks
 {
-    class ProcedeParaCadastroTask
+    class ProceedToRegisterTask
     {
         private IWebDriver navegador;
-        public ProcedeParaCadastroObject buttonProceedToCheckout;
+        public ProceedToRegisterObject buttonProceedToCheckout;
 
-        public ProcedeParaCadastroTask(IWebDriver navegador)
+        public ProceedToRegisterTask(IWebDriver navegador)
         {
             this.navegador = navegador;
-            this.buttonProceedToCheckout = new ProcedeParaCadastroObject(this.navegador);
+            this.buttonProceedToCheckout = new ProceedToRegisterObject(this.navegador);
         }
 
         public void ClicarBotao()

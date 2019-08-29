@@ -2,8 +2,9 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using BDDprovaautomacao.utils;
 
-namespace FrameworkCsharp.Utils
+namespace BDDprovaautomacao.datapools
 {
     public class CsvDatapool
     {

@@ -3,14 +3,14 @@ using OpenQA.Selenium;
 
 namespace BDDprovaautomacao.pageobjects
 {
-    class ProcedeParaCheckoutObject : BasePageObject
+    class ProceedToRegisterObject : BasePageObject
     {
-        public ProcedeParaCheckoutObject(IWebDriver navegador) : base(navegador)
+        public ProceedToRegisterObject(IWebDriver navegador) : base(navegador)
         {
 
         }
 
-        public IWebElement GetProceedToCheckout()
+        public IWebElement GetProceedToCheckout(IWebDriver navegador)
         {
 
             return navegador.FindElement(By.LinkText("Proceed to checkout"));

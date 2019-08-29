@@ -1,6 +1,6 @@
-﻿using BDDprovaautomacao.pageobjects;
+﻿using BDDprovaautomacao.datapools;
+using BDDprovaautomacao.pageobjects;
 using BDDprovaautomacao.utils;
-using FrameworkCsharp.Utils;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using System;

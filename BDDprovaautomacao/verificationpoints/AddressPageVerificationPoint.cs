@@ -5,9 +5,9 @@ using System;
 
 namespace BDDprovaautomacao.verificationpoints
 {
-    class PaginaAdressVerificationPoint : BasePageObject
+    class AddressPageVerificationPoint : BasePageObject
     {
-        public PaginaAdressVerificationPoint(IWebDriver navegador) : base(navegador)
+        public AddressPageVerificationPoint(IWebDriver navegador) : base(navegador)
         {
 
         }

@@ -86,6 +86,7 @@
     <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.Razor.3.0.0\lib\net45\System.Web.Razor.dll</HintPath>
     </Reference>
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -107,12 +108,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="datapools\CsvDatapool.cs" />
-    <Compile Include="pageObjects\AdicionaNoCarrinhoObject.cs" />
-    <Compile Include="pageObjects\EscolheProdutoObject.cs" />
-    <Compile Include="pageObjects\PaginaAdressObject.cs" />
+    <Compile Include="pageObjects\AddToCartObject.cs" />
+    <Compile Include="pageObjects\HomePageObject.cs" />
+    <Compile Include="pageObjects\AddressPageObject.cs" />
     <Compile Include="pageObjects\PaymentPageObject.cs" />
-    <Compile Include="pageObjects\ProcedeParaCadastroObject.cs" />
-    <Compile Include="pageObjects\ProcedeParaCheckoutObject.cs" />
+    <Compile Include="pageObjects\ProceedToRegisterObject.cs" />
+    <Compile Include="pageObjects\ProceedToCheckoutObject.cs" />
     <Compile Include="pageObjects\ShippingPageObject.cs" />
     <Compile Include="pageObjects\SignInPageObject.cs" />
     <Compile Include="tests\steps\ComprarProduto.cs" />
@@ -122,24 +123,29 @@
       <DependentUpon>ComprarProduto.feature</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="tasks\AdicionaNoCarrinhoTask.cs" />
-    <Compile Include="tasks\EscolheProdutoTask.cs" />
-    <Compile Include="tasks\PaginaAdressTask.cs" />
+    <Compile Include="tasks\AddToCartTask.cs" />
+    <Compile Include="tasks\HomePageTask.cs" />
+    <Compile Include="tasks\AddressPageTask.cs" />
     <Compile Include="tasks\PaymentTask.cs" />
-    <Compile Include="tasks\ProcedeParaCadastroTask.cs" />
+    <Compile Include="tasks\ProceedToRegisterTask.cs" />
     <Compile Include="tasks\ProcedeParaCheckoutTask.cs" />
     <Compile Include="tasks\ShippingPageTask.cs" />
     <Compile Include="tasks\SignInPageTask.cs" />
     <Compile Include="tests\steps\GenericSteps.cs" />
     <Compile Include="utils\BasePageObject.cs" />
+    <Compile Include="utils\DateUtils.cs" />
     <Compile Include="utils\ProjConfig.cs" />
     <Compile Include="utils\Report.cs" />
+    <Compile Include="utils\ScreenshotUtils.cs" />
     <Compile Include="utils\TestBase.cs" />
-    <Compile Include="verificationPoints\ConfirmacaoDoProdutoVerificationPoint.cs" />
-    <Compile Include="verificationPoints\PaginaAdressVerificationPoint.cs" />
-    <Compile Include="verificationPoints\PaginaConfirmacaoVerificationPoint.cs" />
-    <Compile Include="verificationPoints\PaginaDescricaoVerificationPoint.cs" />
+    <Compile Include="verificationPoints\HomePageVerificationPoint.cs" />
+    <Compile Include="verificationPoints\ProductConfirmationVerificationPoint.cs" />
+    <Compile Include="verificationPoints\AddressPageVerificationPoint.cs" />
+    <Compile Include="verificationPoints\ConfirmationPageVerificationPoint.cs" />
+    <Compile Include="verificationPoints\DescriptionPageVerificationPoint.cs" />
     <Compile Include="verificationPoints\PaymentVerificationPoint.cs" />
+    <Compile Include="verificationPoints\ShippingPageVerificationPoint.cs" />
+    <Compile Include="verificationPoints\SignInPageVerificationPoint.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">

@@ -3,15 +3,15 @@ using OpenQA.Selenium;
 
 namespace BDDprovaautomacao.tasks
 {
-    class EscolheProdutoTask
+    class HomePageTask
     {
         private IWebDriver navegador;
-        public EscolheProdutoObject produtoPageObject;
+        public HomePageObject produtoPageObject;
 
-        public EscolheProdutoTask(IWebDriver navegador)
+        public HomePageTask(IWebDriver navegador)
         {
             this.navegador = navegador;
-            this.produtoPageObject = new EscolheProdutoObject(this.navegador);
+            this.produtoPageObject = new HomePageObject(this.navegador);
         }
 
         public void ClicarImagem()

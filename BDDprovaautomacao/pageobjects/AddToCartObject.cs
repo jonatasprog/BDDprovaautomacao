@@ -1,12 +1,11 @@
 ﻿using BDDprovaautomacao.utils;
 using OpenQA.Selenium;
 
-
 namespace BDDprovaautomacao.pageobjects
 {
-    class AdicionaNoCarrinhoObject : BasePageObject
+    class AddToCartObject : BasePageObject
     {
-        public AdicionaNoCarrinhoObject(IWebDriver navegador) : base(navegador)
+        public AddToCartObject(IWebDriver navegador) : base(navegador)
         {
 
         }

@@ -6,12 +6,12 @@ namespace BDDprovaautomacao.tasks
     class ProcedeParaCheckoutTask
     {
         private IWebDriver navegador;
-        public ProcedeParaCheckoutObject buttonAddToCart;
+        public ProceedToCheckoutObject buttonAddToCart;
 
         public ProcedeParaCheckoutTask(IWebDriver navegador)
         {
             this.navegador = navegador;
-            this.buttonAddToCart = new ProcedeParaCheckoutObject(this.navegador);
+            this.buttonAddToCart = new ProceedToCheckoutObject(this.navegador);
         }
 
         public void ClicarBotao()

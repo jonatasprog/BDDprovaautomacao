@@ -4,10 +4,10 @@ using System;
 
 namespace BDDprovaautomacao.pageobjects
 {
-    public class EscolheProdutoObject : BasePageObject
+    public class HomePageObject : BasePageObject
     {
         
-        public EscolheProdutoObject(IWebDriver navegador): base (
+        public HomePageObject(IWebDriver navegador): base (
             navegador)
         {
             

@@ -3,9 +3,9 @@ using OpenQA.Selenium;
 
 namespace BDDprovaautomacao.pageobjects
 {
-    class PaginaAdressObject : BasePageObject
+    class AddressPageObject : BasePageObject
     {
-        public PaginaAdressObject(IWebDriver navegador) : base(navegador)
+        public AddressPageObject(IWebDriver navegador) : base(navegador)
         {
 
         }
