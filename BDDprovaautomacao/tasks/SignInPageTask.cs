@@ -20,32 +20,32 @@ namespace BDDprovaautomacao.tasks
         public SignInPageTask(IWebDriver navegador)
         {
             this.navegador = navegador;
-            this.campoCadastrarEmail = new SignInPageObject(navegador);
-            this.buttonCreateAccount = new SignInPageObject(navegador);
-            this.radioButton = new SignInPageObject(navegador);
-            this.campoCustomerFirstName = new SignInPageObject(navegador);
-            this.campoCustomerLastName = new SignInPageObject(navegador);
-            this.campoPassword = new SignInPageObject(navegador);
-            this.comboDay = new SignInPageObject(navegador);
-            this.comboMonth = new SignInPageObject(navegador);
-            this.comboYear = new SignInPageObject(navegador);
-            this.campoFirstName = new SignInPageObject(navegador);
-            this.campoLastName = new SignInPageObject(navegador);
-            this.campoCompany = new SignInPageObject(navegador);
-            this.campoAdress = new SignInPageObject(navegador);
-            this.campoAdress2 = new SignInPageObject(navegador);
-            this.campoCity = new SignInPageObject(navegador);
-            this.comboState = new SignInPageObject(navegador);
-            this.campoPostalCode = new SignInPageObject(navegador);
-            this.comboCountry = new SignInPageObject(navegador);
-            this.campoAdditionalInformation = new SignInPageObject(navegador);
-            this.campoHomePhone = new SignInPageObject(navegador);
-            this.campoMobilePhone = new SignInPageObject(navegador);
-            this.campoAdressAlias = new SignInPageObject(navegador);
-            this.registerButton = new SignInPageObject(navegador);
+            campoCadastrarEmail = new SignInPageObject(navegador);
+            buttonCreateAccount = new SignInPageObject(navegador);
+            radioButton = new SignInPageObject(navegador);
+            campoCustomerFirstName = new SignInPageObject(navegador);
+            campoCustomerLastName = new SignInPageObject(navegador);
+            campoPassword = new SignInPageObject(navegador);
+            comboDay = new SignInPageObject(navegador);
+            comboMonth = new SignInPageObject(navegador);
+            comboYear = new SignInPageObject(navegador);
+            campoFirstName = new SignInPageObject(navegador);
+            campoLastName = new SignInPageObject(navegador);
+            campoCompany = new SignInPageObject(navegador);
+            campoAdress = new SignInPageObject(navegador);
+            campoAdress2 = new SignInPageObject(navegador);
+            campoCity = new SignInPageObject(navegador);
+            comboState = new SignInPageObject(navegador);
+            campoPostalCode = new SignInPageObject(navegador);
+            comboCountry = new SignInPageObject(navegador);
+            campoAdditionalInformation = new SignInPageObject(navegador);
+            campoHomePhone = new SignInPageObject(navegador);
+            campoMobilePhone = new SignInPageObject(navegador);
+            campoAdressAlias = new SignInPageObject(navegador);
+            registerButton = new SignInPageObject(navegador);
 
         }
-
+        //Method to generate random email
         public void CadastrarEmail()
         {
 
@@ -68,63 +68,34 @@ namespace BDDprovaautomacao.tasks
         {
             this.buttonCreateAccount.GetSubmitCreateButton(navegador).Click();
         }
-
-        //public void PreencherFormulario()
-        //{
-        //    this.radioButton.GetRadioButton(navegador).Click();
-        //    this.campoCustomerFirstName.SetFirstCustomerName(navegador).SendKeys("Jônatas");
-        //    this.campoCustomerLastName.SetLastCustomerName(navegador).SendKeys("Deorce");
-        //    this.campoPassword.SetPasswd(navegador).SendKeys("DbServer123456");
-        //    this.comboDay.ComboDay(navegador).Click();
-        //    new SelectElement(comboDay.ComboDay(navegador)).SelectByValue("3");
-        //    this.comboMonth.ComboMonth(navegador).Click();
-        //    new SelectElement(comboMonth.ComboMonth(navegador)).SelectByText("March ");
-        //    this.comboYear.ComboYear(navegador).Click();
-        //    new SelectElement(comboYear.ComboYear(navegador)).SelectByText("1989  ");
-        //    this.campoCompany.SetCompany(navegador).SendKeys("DbServer");
-        //    this.campoAdress.SetAdress(navegador).SendKeys("Avenida Ipiranga, número 17");
-        //    this.campoAdress2.SetAdress2(navegador).SendKeys("Próximo a PUCRS");
-        //    this.campoCity.SetCity(navegador).SendKeys("Porto Alegre");
-        //    this.comboState.ComboState(navegador).Click();
-        //    new SelectElement(comboState.ComboState(navegador)).SelectByText("Alabama");
-        //    this.campoPostalCode.SetPostalCode(navegador).SendKeys("29150");
-        //    this.comboCountry.SetComboCountry(navegador).Click();
-        //    new SelectElement(comboCountry.SetComboCountry(navegador)).SelectByText("United States");
-        //    this.campoAdditionalInformation.SetAdditionalInformation(navegador).SendKeys("Moro no Brasil, porém este form só aceita Estados Unidos no ComboBox!");
-        //    this.campoHomePhone.SetHomePhone(navegador).SendKeys("2730907708");
-        //    this.campoMobilePhone.SetMobilePhone(navegador).SendKeys("27995322525");
-        //    this.campoAdressAlias.SetAdressAlias(navegador).SendKeys("jonatasd@dbserver.com.br");
-        //    this.registerButton.GetRegisterButton(navegador).Click();
-
-        //}
-
+        //This method is using our datapool csv file to input userdata
         public void PreencherFormulario()
         {
             CsvDatapool datapool = new CsvDatapool(ProjConfig.GetPath("\\BDDprovaautomacao\\datapools\\csvs\\FormularioCadastro.csv"));            
             
-            this.radioButton.GetRadioButton(navegador).Click();
+            this.radioButton.GetRadioButton(navegador).Click();            
             this.campoCustomerFirstName.SetFirstCustomerName(navegador).SendKeys(datapool.GetValue("FirstName"));
-            this.campoCustomerLastName.SetLastCustomerName(navegador).SendKeys("Deorce");
-            this.campoPassword.SetPasswd(navegador).SendKeys("DbServer123456");
+            this.campoCustomerLastName.SetLastCustomerName(navegador).SendKeys(datapool.GetValue("LastName"));
+            this.campoPassword.SetPasswd(navegador).SendKeys(datapool.GetValue("Password"));
             this.comboDay.ComboDay(navegador).Click();
-            new SelectElement(comboDay.ComboDay(navegador)).SelectByValue("3");            
+            new SelectElement(comboDay.ComboDay(navegador)).SelectByValue(datapool.GetValue("BirthDay"));            
             this.comboMonth.ComboMonth(navegador).Click();
-            new SelectElement(comboMonth.ComboMonth(navegador)).SelectByText("March ");            
+            new SelectElement(comboMonth.ComboMonth(navegador)).SelectByText(datapool.GetValue("BirthMonth"));            
             this.comboYear.ComboYear(navegador).Click();
-            new SelectElement(comboYear.ComboYear(navegador)).SelectByText("1989  ");
-            this.campoCompany.SetCompany(navegador).SendKeys("DbServer");
-            this.campoAdress.SetAdress(navegador).SendKeys("Avenida Ipiranga, número 17");
-            this.campoAdress2.SetAdress2(navegador).SendKeys("Próximo a PUCRS");
-            this.campoCity.SetCity(navegador).SendKeys("Porto Alegre");
+            new SelectElement(comboYear.ComboYear(navegador)).SelectByText(datapool.GetValue("BirthYear"));
+            this.campoCompany.SetCompany(navegador).SendKeys(datapool.GetValue("Company"));
+            this.campoAdress.SetAdress(navegador).SendKeys(datapool.GetValue("AddressField1"));
+            this.campoAdress2.SetAdress2(navegador).SendKeys(datapool.GetValue("AddressField2"));
+            this.campoCity.SetCity(navegador).SendKeys(datapool.GetValue("City"));
             this.comboState.ComboState(navegador).Click();            
-            new SelectElement(comboState.ComboState(navegador)).SelectByText("Alabama");
-            this.campoPostalCode.SetPostalCode(navegador).SendKeys("29150");
+            new SelectElement(comboState.ComboState(navegador)).SelectByText(datapool.GetValue("State"));
+            this.campoPostalCode.SetPostalCode(navegador).SendKeys(datapool.GetValue("PostalCode"));
             this.comboCountry.SetComboCountry(navegador).Click();            
-            new SelectElement(comboCountry.SetComboCountry(navegador)).SelectByText("United States");
-            this.campoAdditionalInformation.SetAdditionalInformation(navegador).SendKeys("Moro no Brasil, porém este form só aceita Estados Unidos no ComboBox!");
-            this.campoHomePhone.SetHomePhone(navegador).SendKeys("2730907708");
-            this.campoMobilePhone.SetMobilePhone(navegador).SendKeys("27995322525");
-            this.campoAdressAlias.SetAdressAlias(navegador).SendKeys("jonatasd@dbserver.com.br");
+            new SelectElement(comboCountry.SetComboCountry(navegador)).SelectByText(datapool.GetValue("Country"));
+            this.campoAdditionalInformation.SetAdditionalInformation(navegador).SendKeys(datapool.GetValue("AdditionalInformation"));
+            this.campoHomePhone.SetHomePhone(navegador).SendKeys(datapool.GetValue("HomePhone"));
+            this.campoMobilePhone.SetMobilePhone(navegador).SendKeys(datapool.GetValue("MobilePhone"));
+            this.campoAdressAlias.SetAdressAlias(navegador).SendKeys(datapool.GetValue("EmailAdressAlias"));
             this.registerButton.GetRegisterButton(navegador).Click();
 
         }
