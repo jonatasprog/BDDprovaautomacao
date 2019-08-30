@@ -3,7 +3,7 @@ BDDprovaautomacao is a Web Behavior-Driven Development (BDD) Test Automation Pro
 ## Requirements
 
 * Microsoft Visual Studio 2017 as integrated development environment (IDE).
-* .NET Framework 4.6.1 (To set this framework go to Project > Properties > Application > Targer framework = .NET Framework 4.6.1.)
+* .NET Framework 4.6.1 (To set this framework go to Project > Properties > Application > Targer framework = .NET Framework 4.6.1).
 
 If some installed dependencies do not work, they can be found in NuGet Package Manager on Visual Studio:
 * Selenium.WebDriver
