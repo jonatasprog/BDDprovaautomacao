@@ -3,7 +3,7 @@ BDDprovaautomacao is a Web Behavior-Driven Development (BDD) Test Automation Pro
 ## Requirements
 Microsoft Visual Studio 2017 as integrated development environment (IDE).
 
-Some dependencies installed wich can be found on NuGet Package Manager inside Visual Studio:
+If some installed dependencies do not work, they can be found in NuGet Package Manager on Visual Studio:
 * Selenium.WebDriver
 * Selenium.Support 
 * Selenium.Chrome.WebDriver
@@ -18,7 +18,8 @@ Tell me if you have any version conflicts using these references.
 
 ## Usage
 
-To run our tests we just need to make sure that NUnit3 Test Adapter has detected our BDD features on Test Explorer. Then we can run It according to the selected test.
+* At first, build the solution by going to Build > Build Solution
+* Now to run our tests we just need to make sure that NUnit3 Test Adapter has detected our BDD features on Test Explorer. Then we can run It according to the selected test.
 
 To open Test Explorer go to Test > Windows > Test Explorer: The Test Explorer lists the Test Studio tests within the currently opened solution.
 
