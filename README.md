@@ -1,7 +1,9 @@
 # BDDprovaautomacao
 BDDprovaautomacao is a Web Behavior-Driven Development (BDD) Test Automation Project example on .Net Platform using Selenium Webdriver API and Specflow as BDD tool. It's used C# as object-oriented programming language and Gherkin language in SpecFlow by wich use feature files to specify acceptance criteria for features (user cases, user stories) inside the application by using a specific syntax. The Gherkin language defines the structure and a basic syntax for describing tests.
 ## Requirements
-Microsoft Visual Studio 2017 as integrated development environment (IDE).
+
+* Microsoft Visual Studio 2017 as integrated development environment (IDE).
+* .NET Framework 4.6.1 To set this framework go to Project > Properties > Application > Targer framework = .NET Framework 4.6.1.
 
 If some installed dependencies do not work, they can be found in NuGet Package Manager on Visual Studio:
 * Selenium.WebDriver
