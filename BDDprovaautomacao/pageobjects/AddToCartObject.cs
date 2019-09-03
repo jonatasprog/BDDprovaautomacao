@@ -3,7 +3,7 @@ using OpenQA.Selenium;
 
 namespace BDDprovaautomacao.pageobjects
 {
-    class AddToCartObject : BasePageObject
+    class AddToCartObject : BaseDriver
     {
         public AddToCartObject(IWebDriver navegador) : base(navegador)
         {

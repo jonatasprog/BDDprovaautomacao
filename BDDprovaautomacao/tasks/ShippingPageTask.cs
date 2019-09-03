@@ -12,18 +12,18 @@ namespace BDDprovaautomacao.tasks
         public ShippingPageTask(IWebDriver navegador)
         {
             this.navegador = navegador;
-            this.buttonProceedToCheckout = new ShippingPageObject(this.navegador);
-            this.marcarCheckBoxx = new ShippingPageObject(this.navegador);
+            buttonProceedToCheckout = new ShippingPageObject(navegador);
+            marcarCheckBoxx = new ShippingPageObject(navegador);
         }
 
         public void MarcarCheckBox()
         {
-            this.marcarCheckBoxx.GetCheckBox(navegador).Click();
+            marcarCheckBoxx.GetCheckBox(navegador).Click();
         }
 
         public void ClicarBotao()
         {
-            this.buttonProceedToCheckout.GetProceedToCheckout(navegador).Click();
+            buttonProceedToCheckout.GetProceedToCheckout(navegador).Click();
         }
     }
 }

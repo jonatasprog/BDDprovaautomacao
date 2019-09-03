@@ -60,43 +60,43 @@ namespace BDDprovaautomacao.tasks
             }
             String saltStr = salt.ToString();
 
-            this.campoCadastrarEmail.SetEmailAdress(this.navegador).SendKeys(saltStr + "@gmail.com");
+            campoCadastrarEmail.SetEmailAdress(navegador).SendKeys(saltStr + "@gmail.com");
 
         }
 
         public void ClicarBotao()
         {
-            this.buttonCreateAccount.GetSubmitCreateButton(navegador).Click();
+            buttonCreateAccount.GetSubmitCreateButton(navegador).Click();
         }
         //This method is using our datapool csv file to input userdata
         public void PreencherFormulario()
         {
             CsvDatapool datapool = new CsvDatapool(ProjConfig.GetPath("\\BDDprovaautomacao\\datapools\\csvs\\FormularioCadastro.csv"));            
             
-            this.radioButton.GetRadioButton(navegador).Click();            
-            this.campoCustomerFirstName.SetFirstCustomerName(navegador).SendKeys(datapool.GetValue("FirstName"));
-            this.campoCustomerLastName.SetLastCustomerName(navegador).SendKeys(datapool.GetValue("LastName"));
-            this.campoPassword.SetPasswd(navegador).SendKeys(datapool.GetValue("Password"));
-            this.comboDay.ComboDay(navegador).Click();
+            radioButton.GetRadioButton(navegador).Click();            
+            campoCustomerFirstName.SetFirstCustomerName(navegador).SendKeys(datapool.GetValue("FirstName"));
+            campoCustomerLastName.SetLastCustomerName(navegador).SendKeys(datapool.GetValue("LastName"));
+            campoPassword.SetPasswd(navegador).SendKeys(datapool.GetValue("Password"));
+            comboDay.ComboDay(navegador).Click();
             new SelectElement(comboDay.ComboDay(navegador)).SelectByValue(datapool.GetValue("BirthDay"));            
-            this.comboMonth.ComboMonth(navegador).Click();
+            comboMonth.ComboMonth(navegador).Click();
             new SelectElement(comboMonth.ComboMonth(navegador)).SelectByText(datapool.GetValue("BirthMonth"));            
-            this.comboYear.ComboYear(navegador).Click();
+            comboYear.ComboYear(navegador).Click();
             new SelectElement(comboYear.ComboYear(navegador)).SelectByText(datapool.GetValue("BirthYear"));
-            this.campoCompany.SetCompany(navegador).SendKeys(datapool.GetValue("Company"));
-            this.campoAdress.SetAdress(navegador).SendKeys(datapool.GetValue("AddressField1"));
-            this.campoAdress2.SetAdress2(navegador).SendKeys(datapool.GetValue("AddressField2"));
-            this.campoCity.SetCity(navegador).SendKeys(datapool.GetValue("City"));
-            this.comboState.ComboState(navegador).Click();            
+            campoCompany.SetCompany(navegador).SendKeys(datapool.GetValue("Company"));
+            campoAdress.SetAdress(navegador).SendKeys(datapool.GetValue("AddressField1"));
+            campoAdress2.SetAdress2(navegador).SendKeys(datapool.GetValue("AddressField2"));
+            campoCity.SetCity(navegador).SendKeys(datapool.GetValue("City"));
+            comboState.ComboState(navegador).Click();            
             new SelectElement(comboState.ComboState(navegador)).SelectByText(datapool.GetValue("State"));
-            this.campoPostalCode.SetPostalCode(navegador).SendKeys(datapool.GetValue("PostalCode"));
-            this.comboCountry.SetComboCountry(navegador).Click();            
+            campoPostalCode.SetPostalCode(navegador).SendKeys(datapool.GetValue("PostalCode"));
+            comboCountry.SetComboCountry(navegador).Click();            
             new SelectElement(comboCountry.SetComboCountry(navegador)).SelectByText(datapool.GetValue("Country"));
-            this.campoAdditionalInformation.SetAdditionalInformation(navegador).SendKeys(datapool.GetValue("AdditionalInformation"));
-            this.campoHomePhone.SetHomePhone(navegador).SendKeys(datapool.GetValue("HomePhone"));
-            this.campoMobilePhone.SetMobilePhone(navegador).SendKeys(datapool.GetValue("MobilePhone"));
-            this.campoAdressAlias.SetAdressAlias(navegador).SendKeys(datapool.GetValue("EmailAdressAlias"));
-            this.registerButton.GetRegisterButton(navegador).Click();
+            campoAdditionalInformation.SetAdditionalInformation(navegador).SendKeys(datapool.GetValue("AdditionalInformation"));
+            campoHomePhone.SetHomePhone(navegador).SendKeys(datapool.GetValue("HomePhone"));
+            campoMobilePhone.SetMobilePhone(navegador).SendKeys(datapool.GetValue("MobilePhone"));
+            campoAdressAlias.SetAdressAlias(navegador).SendKeys(datapool.GetValue("EmailAdressAlias"));
+            registerButton.GetRegisterButton(navegador).Click();
 
         }
     }

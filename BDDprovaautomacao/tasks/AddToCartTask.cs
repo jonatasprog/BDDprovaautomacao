@@ -11,12 +11,12 @@ namespace BDDprovaautomacao.tasks
         public AddToCartTask(IWebDriver navegador)
         {
             this.navegador = navegador;
-            this.buttonAddToCart = new AddToCartObject(this.navegador);
+            buttonAddToCart = new AddToCartObject(this.navegador);
         }
         
         public void ClicarBotao()
         {
-            this.buttonAddToCart.GetAddToCartButton().Click();
+            buttonAddToCart.GetAddToCartButton().Click();
         }
     }
 }

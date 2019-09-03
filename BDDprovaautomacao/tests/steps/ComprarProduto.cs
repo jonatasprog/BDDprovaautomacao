@@ -11,7 +11,7 @@ namespace BDDprovaautomacao
     [Binding]
     public class StepDefinitions
     {
-        private static IWebDriver navegador;        
+        private static IWebDriver navegador;
 
         [Given(@"Usuário está na Home Page")]
         public void GivenUsuarioEstaNaHomePage()
@@ -81,7 +81,8 @@ namespace BDDprovaautomacao
         [When(@"O usuário é redirecionado para a página do carrinho")]
         public void WhenOUsuarioERedirecionadoParaAPaginaDoCarrinho()
         {
-
+            AddToCartVerificationPoint cartPage = new AddToCartVerificationPoint(navegador);
+            cartPage.AddToCartPageVP();
         }
 
         [Then(@"Usuário clica no botão procede para checkout")]
@@ -90,11 +91,12 @@ namespace BDDprovaautomacao
             ProceedToRegisterTask buttonProceedToCheckout2 = new ProceedToRegisterTask(navegador);
             buttonProceedToCheckout2.ClicarBotao();
         }
-        
+
         [Given(@"Usuário está na primeira página de Sign In")]
         public void GivenUsuarioEstaNaPrimeiraPaginaDeSignIn()
         {
-
+            SignInPageVerificationPoint signInPage = new SignInPageVerificationPoint(navegador);
+            signInPage.GetSignInPageVP();
         }
 
         [Given(@"Usuário digita seu email no campo de email para cadastro")]
@@ -114,7 +116,8 @@ namespace BDDprovaautomacao
         [When(@"Usuário finalmente está na página de Sign In de cadastro dos seus demais dados")]
         public void WhenUsuarioFinalmenteEstaNaPaginaDeSignInDeCadastroDosSeusDemaisDados()
         {
-
+            AddressPageVerificationPoint addressPage = new AddressPageVerificationPoint(navegador);
+            addressPage.GetAddressPageVP();
         }
 
         [Then(@"Usuário preenche o formulário e clica no botão para submeter seu registro")]
@@ -122,13 +125,12 @@ namespace BDDprovaautomacao
         {
             SignInPageTask elementosDeCadastro = new SignInPageTask(navegador);
             elementosDeCadastro.PreencherFormulario();
-        }       
-        
+        }
+
         [Given(@"Usuário está na sessão de confirmação do seus dados")]
         public void GivenUsuarioEstaNaSessaoDeConfirmacaoDoSeusDados()
         {
-            AddressPageVerificationPoint validarDados = new AddressPageVerificationPoint(navegador);
-            validarDados.GetAdress();
+
         }
 
         [Given(@"Usuário confere seus dados e clica no botão de proceder para checkout")]
@@ -141,7 +143,8 @@ namespace BDDprovaautomacao
         [Given(@"Usuário é redirecionado para a sessão de frete e forma de envio")]
         public void GivenUsuarioERedirecionadoParaASessaoDeFreteEFormaDeEnvio()
         {
-
+            ShippingPageVerificationPoint shippingPage = new ShippingPageVerificationPoint(navegador);
+            shippingPage.GetShippingPageVP();
         }
 
         [Given(@"Usuário clica marcando a caixinha concordando com termos de serviço e envio")]
@@ -163,6 +166,7 @@ namespace BDDprovaautomacao
         {
             PaymentVerificationPoint total = new PaymentVerificationPoint(navegador);
             total.GetTotal();
+            total.GetPaymentPageVP();
         }
 
         [When(@"Usuário seleciona um método de pagamento clicando no botao de crédito ou débito")]
@@ -178,14 +182,14 @@ namespace BDDprovaautomacao
             PaymentVerificationPoint totalAmount = new PaymentVerificationPoint(navegador);
             totalAmount.GetTotalAmount();
         }
-        
+
         [Then(@"Usuário clica no botao de confirmação do pedido")]
         public void ThenUsuarioClicaNoBotaoDeConfirmacaoDoPedido()
         {
             PaymentTask confirmarMinhaCompra = new PaymentTask(navegador);
             confirmarMinhaCompra.ClicarBotaoConfirmandoPagamento();
+            Report.Stop();
             TestBase.FecharBrownser(navegador);
-        }      
-
+        }
     }
 }

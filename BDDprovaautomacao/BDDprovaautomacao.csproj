@@ -132,12 +132,13 @@
     <Compile Include="tasks\ShippingPageTask.cs" />
     <Compile Include="tasks\SignInPageTask.cs" />
     <Compile Include="tests\steps\GenericSteps.cs" />
-    <Compile Include="utils\BasePageObject.cs" />
+    <Compile Include="utils\BaseDriver.cs" />
     <Compile Include="utils\DateUtils.cs" />
     <Compile Include="utils\ProjConfig.cs" />
     <Compile Include="utils\Report.cs" />
     <Compile Include="utils\ScreenshotUtils.cs" />
     <Compile Include="utils\TestBase.cs" />
+    <Compile Include="verificationPoints\AddToCartVerificationPoint.cs" />
     <Compile Include="verificationPoints\HomePageVerificationPoint.cs" />
     <Compile Include="verificationPoints\ProductConfirmationVerificationPoint.cs" />
     <Compile Include="verificationPoints\AddressPageVerificationPoint.cs" />

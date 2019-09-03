@@ -7,7 +7,8 @@ using WebDriverManager.DriverConfigs.Impl;
 namespace BDDprovaautomacao.utils
 {
     public class TestBase
-    {       
+    {
+        private static IWebDriver navegador;
 
         public static IWebDriver CreateChrome()
         {            
@@ -17,7 +18,7 @@ namespace BDDprovaautomacao.utils
             navegador.Manage().Window.Maximize();            
             navegador.Navigate().GoToUrl("http://www.automationpractice.com");           
             return navegador;
-        }
+        }    
 
         public static void FecharBrownser(IWebDriver navegador)
         {           

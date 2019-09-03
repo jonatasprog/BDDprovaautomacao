@@ -11,12 +11,12 @@ namespace BDDprovaautomacao.tasks
         public AddressPageTask(IWebDriver navegador)
         {
             this.navegador = navegador;
-            this.buttonProceedToCheckout = new AddressPageObject(this.navegador);
+            buttonProceedToCheckout = new AddressPageObject(this.navegador);
         }
 
         public void ClicarBotao()
         {
-            this.buttonProceedToCheckout.GetProceedToCheckout().Click();
+            buttonProceedToCheckout.GetProceedToCheckout().Click();
         }
     }
 }

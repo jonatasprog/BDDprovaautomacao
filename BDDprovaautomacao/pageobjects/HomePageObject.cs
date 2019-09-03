@@ -4,7 +4,7 @@ using System;
 
 namespace BDDprovaautomacao.pageobjects
 {
-    public class HomePageObject : BasePageObject
+    public class HomePageObject : BaseDriver
     {
         
         public HomePageObject(IWebDriver navegador): base (

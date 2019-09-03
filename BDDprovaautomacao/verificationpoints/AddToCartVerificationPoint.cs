@@ -4,19 +4,21 @@ using RelevantCodes.ExtentReports;
 
 namespace BDDprovaautomacao.verificationPoints
 {
-    class SignInPageVerificationPoint : BaseDriver
+    class AddToCartVerificationPoint : BaseDriver
     {
-        public SignInPageVerificationPoint(IWebDriver navegador) : base(navegador) { }
+        public AddToCartVerificationPoint(IWebDriver navegador) : base(navegador)
+        {
 
-        public void GetSignInPageVP()
+        }
+        public void AddToCartPageVP()
         {
             try
             {
-                IWebElement element = navegador.FindElement(By.Id("authentication"));                
+                IWebElement element = navegador.FindElement(By.Id("center_column"));                
                 System.Threading.Thread.Sleep(10000);
                 IJavaScriptExecutor jse = (IJavaScriptExecutor)navegador;
                 jse.ExecuteScript("window.scrollBy(0,650)");
-                Report.Log(LogStatus.Pass, "SignInPage successfully acessed!", ScreenshotUtils.Capture());
+                Report.Log(LogStatus.Pass, "CartPage successfully accessed!", ScreenshotUtils.Capture());
             }
             catch
             {

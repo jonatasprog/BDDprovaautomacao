@@ -3,7 +3,7 @@ using OpenQA.Selenium;
 
 namespace BDDprovaautomacao.pageobjects
 {
-    class ProceedToCheckoutObject : BasePageObject
+    class ProceedToCheckoutObject : BaseDriver
     {
         public ProceedToCheckoutObject(IWebDriver navegador) : base(navegador)
         {

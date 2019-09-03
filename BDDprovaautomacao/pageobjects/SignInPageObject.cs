@@ -3,7 +3,7 @@ using OpenQA.Selenium;
 
 namespace BDDprovaautomacao.pageobjects
 {
-    class SignInPageObject : BasePageObject
+    class SignInPageObject : BaseDriver
     {
         public SignInPageObject(IWebDriver navegador) : base(navegador)
         {

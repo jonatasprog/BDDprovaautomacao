@@ -5,7 +5,7 @@ using RelevantCodes.ExtentReports;
 
 namespace BDDprovaautomacao.verificationPoints
 {
-    class HomePageVerificationPoint : BasePageObject
+    class HomePageVerificationPoint : BaseDriver
     {
         public HomePageVerificationPoint(IWebDriver navegador) : base(navegador) { }
 

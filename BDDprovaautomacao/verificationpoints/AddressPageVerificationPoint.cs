@@ -1,24 +1,28 @@
 ﻿using BDDprovaautomacao.utils;
-using NUnit.Framework;
 using OpenQA.Selenium;
-using System;
+using RelevantCodes.ExtentReports;
 
 namespace BDDprovaautomacao.verificationpoints
 {
-    class AddressPageVerificationPoint : BasePageObject
+    class AddressPageVerificationPoint : BaseDriver
     {
         public AddressPageVerificationPoint(IWebDriver navegador) : base(navegador)
         {
 
         }
-        public String GetAdress()
+        public void GetAddressPageVP()
         {
-
-            String titulo;
-            titulo = navegador.FindElement(By.XPath("//ul[@id='address_delivery']//li[@class='address_address1 address_address2'][contains(text(),'Avenida Ipiranga, número 17 Próximo a PUCRS')]")).Text;
-            Assert.AreEqual(titulo, "Avenida Ipiranga, número 17 Próximo a PUCRS");
-
-            return titulo;
+            try
+            {
+                System.Threading.Thread.Sleep(4000);
+                IWebElement element = navegador.FindElement(By.Id("customer_firstname"));                
+                Report.Log(LogStatus.Pass, "AddressPage successfully acessed!", ScreenshotUtils.Capture());
+            }
+            catch
+            {
+                Report.Log(LogStatus.Error, "Page Not Found!", ScreenshotUtils.Capture());
+                throw new NoSuchElementException("Page Not Found!");
+            }
         }
     }
 }
